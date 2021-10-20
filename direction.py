@@ -2,15 +2,14 @@
 #n,s,e,w=0,1,2,3
 
 x=input("Enter initial direction: ")
-if x=='n':
-    val=0
-elif x=='s':
-    val=1
-elif x=='e':
-    val=2
-elif x=='w':
-    val=3
-else:
+direction_map = {
+    'n': 0,
+    's': 1,
+    'e': 2,
+    'w': 3,
+}
+val = direction_map.get(x)
+if not val:
     print("Incorrect Input")
     exit()
     
